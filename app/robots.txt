@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /private/
+Disallow: /dashboard
+
+Sitemap: https://soben.sen-pai.live/sitemap.xml

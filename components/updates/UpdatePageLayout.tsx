@@ -47,7 +47,7 @@ const UpdatePageLayout = ({ category, name, price, image, quantity, desc, seller
         const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/file/${typeFile}/`, {
             method: "POST",
             headers: {
-                'Authorization': `Bearer ${process.env.ACCESS_TOKEN}`,
+                'Authorization': `Bearer ${process.env.NEXT_PUBLIC_ACCESS_TOKEN}`,
             },
             body: data,
         });
@@ -63,7 +63,7 @@ const UpdatePageLayout = ({ category, name, price, image, quantity, desc, seller
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${process.env.ACCESS_TOKEN}`,
+                    'Authorization': `Bearer ${process.env.NEXT_PUBLIC_ACCESS_TOKEN}`,
                 },
                 body: JSON.stringify(productPost)
             });

@@ -86,7 +86,7 @@ export default function Product() {
 		const rest = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/file/${typeFile}/`, {
 			method: "POST",
 			headers: {
-				Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
+				Authorization: `Bearer ${process.env.NEXT_PUBLIC_ACCESS_TOKEN}`,
 			},
 			body: formData,
 		});
@@ -100,7 +100,7 @@ export default function Product() {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
-				Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
+				Authorization: `Bearer ${process.env.NEXT_PUBLIC_ACCESS_TOKEN}`,
 			},
 			body: JSON.stringify(value),
 		});

@@ -53,7 +53,7 @@ const PageDetail = async (props:PropsParams) => {
       <main className="container mx-5 mt-20">
           <section className="flex flex-col justify-between lg:flex-row gap-16 lg:items-center">
             <div className="flex flex-col gap-6 lg:w-2/4">
-                <img src={data.image} alt="" className="w-full aspect-square object-cover rounded-lg"/>
+                <img src={data.image} alt="" className="w-full md:w-[150] aspect-square object-cover rounded-lg"/>
             </div>
               <div className="flex flex-col gap-6 lg:w-2/4">
                 <div>

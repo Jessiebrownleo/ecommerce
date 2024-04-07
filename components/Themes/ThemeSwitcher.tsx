@@ -20,7 +20,7 @@ export default function ThemeSwitcher() {
   return (
     <div className='flex gap-4'>
       {theme !== 'light' && (
-        <Button size='sm' variant='flat' onClick={() => setTheme('light')}>
+        <Button size='sm'  variant='flat' onClick={() => setTheme('light')}>
           <SunIcon />
         </Button>
       )}

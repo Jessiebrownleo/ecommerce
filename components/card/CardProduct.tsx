@@ -1,10 +1,12 @@
-import Image from "next/image";
+
+import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
+import React from "react";
 type CardProductProps = {
   image: string;
   name: string;
   price: number;
   onClick?: () => void;
-  seller: string;
+  seller: string; 
 };
 const CardProduct = ({
   image,
@@ -14,27 +16,29 @@ const CardProduct = ({
   onClick,
 }: CardProductProps) => {
   return (
-    <section className="card bg-white dark:bg-gray-800 transform transition duration-500 ease-in-out hover:scale-105" onClick={onClick}>
-      <div className="image-container">
-        <img className="w-full h-full object-cover" src={image} alt={name} />
-      </div>
-      <div className="flex flex-col gap-3 p-5">
-        {/*badge*/}
-        <div className="flex items-center gap-2">
-          <p className="badge text-black dark:text-blue-700">Stock Ready</p>
-          <span className="badge text-black dark:text-blue-700">{seller}</span>
-        </div>
-        <h2 className="product-title text-black dark:text-white" title="Best Product Ever">
-          {name}
-        </h2>
+    <div className="max-w-[300px] " onClick={onClick}>
+    <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5" >
+      <CardHeader className="absolute z-10 top-1 flex-col items-start ">
+
+      </CardHeader>
+      <Image
+        removeWrapper
+        alt="Card example background"
+        className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
+        src={image}
+      />
+      <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
         <div>
-          <span className="text-xl font-bold text-black dark:text-white">${price}</span>
+          <p className="text-black text-md">{name}</p>
         </div>
-        <div className="mt-5 flex gap-2">
-          <button className="button-style bg-blue-500 text-white transition-colors duration-300 ease-in-out hover:bg-blue-600">Add to Cart</button>
-        </div>
-      </div>
-    </section>
+        <Button className="text-tiny" color="primary" radius="full" size="sm">
+          Add to cart
+        </Button>
+      </CardFooter>
+    </Card>
+
+  </div>
   );
+
 };
 export default CardProduct;

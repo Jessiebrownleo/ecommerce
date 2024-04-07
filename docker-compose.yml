@@ -1,0 +1,19 @@
+version: '3'
+services:
+  ecommerce_by_soben:
+    #	  image: naemyouimages
+    container_name: ecommerce_by_soben
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3241:3000
+    environment:
+      - NODE_ENV=production
+      - GENERATE_SOURCEMAP=false
+    networks:
+      - data_analytics
+networks:
+  data_analytics:
+    external: true

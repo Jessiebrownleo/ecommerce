@@ -83,7 +83,7 @@ export default function Product() {
 		formData.append("name", name);
 		formData.append("image", file);
 
-		const rest = await fetch(`${process.env.BASE_URL}/api/file/${typeFile}/`, {
+		const rest = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/file/${typeFile}/`, {
 			method: "POST",
 			headers: {
 				Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
@@ -96,7 +96,7 @@ export default function Product() {
 	};
 
 	const handleSubmitProudct = async (value: ProductPostType) => {
-		const res = await fetch(`${process.env.BASE_URL}/api/products/`, {
+		const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products/`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

@@ -1,7 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation';
 import { Field, Form, Formik } from 'formik';
-import style from '@/Components/updates/style.module.css';
+import style from '@/components/updates/style.module.css';
 import { FormDelete} from "@/lib/definition";
 
 const DeleteComponentLayout = ({

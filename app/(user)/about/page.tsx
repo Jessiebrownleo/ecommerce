@@ -1,6 +1,7 @@
 
 import React from 'react';
-import Image from 'next/image';
+
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function AboutPage() {
           </div>
           <div className="md:w-7/12 lg:w-6/12">
             <h2 className="text-2xl text-gray-900 dark:text-white font-bold md:text-4xl">We are passionate about e-commerce</h2>
-            <p className="mt-6 text-gray-600 dark:text-gray-300">Our team is dedicated to providing the best online shopping experience. We strive to bring you the highest quality products, at the best prices, with the greatest customer service. We are constantly innovating and improving our platform to better serve our customers.</p>
+            <TextGenerateEffect words="Our team is dedicated to providing the best online shopping experience. We strive to bring you the highest quality products, at the best prices, with the greatest customer service. We are constantly innovating and improving our platform to better serve our customers." />
           </div>
         </div>
       </div>

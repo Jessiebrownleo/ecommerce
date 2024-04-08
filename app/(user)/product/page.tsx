@@ -77,7 +77,7 @@ const ProductPage: React.FC = () => {
           />
         ))}
       </section>
-      <div className="flex justify-center space-x-2 my-4">
+      <div className="w-full flex justify-center space-x-2 my-4 ">
         <button
           onClick={handlePrevPage}
           disabled={!prevPage}
